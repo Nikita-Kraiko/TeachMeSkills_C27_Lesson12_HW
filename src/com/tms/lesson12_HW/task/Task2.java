@@ -15,8 +15,13 @@ public class Task2 {
         Matcher mailMatch = email.matcher(string);
         Matcher phoneMatch = phoneNumber.matcher(string);
 
-        System.out.println(mailMatch.find() ? mailMatch.group() : "Not found");
-        System.out.println(phoneMatch.find() ? phoneMatch.group() : "Not found");
+
+        while (mailMatch.find()) {
+            System.out.println(mailMatch.group());
+        }
+        while (phoneMatch.find()) {
+            System.out.println(phoneMatch.group());
+        }
         while (docsMatch.find()) {
             System.out.println(docsMatch.group());
         }
